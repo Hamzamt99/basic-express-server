@@ -13,18 +13,19 @@ describe('Test the Error Handlers', () => {
         expect(res.status).toEqual(404);
     })
     it('Bad Method 404', async () => {
-        const res = await req.get('/badMethod');
+        const res = await req.post('/person/name');
         expect(res.status).toEqual(404);
     })
     it(' if the name is in the query string', async () => {
         const res = await req.get('/person/name');
         expect(res.status).toEqual(200);
     })
-    it(' ', async () => {
-        const obj = await req.query
-        expect(obj).toBe(req.query);
+    it('test the query if string', async () => {
+        const res = await req.get('/person/name')
+        expect(res.status).toBe(200);
     })
-    // it('Test the 500', async()=>{
-    //     const res = await req.get('')
-    // })
+    it('test the query if number', async () => {
+        const res = await req.get('/person/6')
+        expect(res.status).toBe(500);
+    })
 })

@@ -5,6 +5,7 @@ module.exports = function validator(req, res, next) {
     if(isNaN(+param)){   
         req.query = param;
         next();
-    } 
-    next(500)
+    }else {
+        next(500)
+    }
 }
