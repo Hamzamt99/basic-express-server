@@ -21,8 +21,8 @@ describe('Test the Error Handlers', () => {
         expect(res.status).toEqual(200);
     })
     it('test the query if string', async () => {
-        const res = await req.get('/person/name')
-        expect(res.status).toBe(200);
+        const res = await req.get('/person/hamza')
+        expect(res.body).toEqual({"name": "hamza"});
     })
     it('test the query if number', async () => {
         const res = await req.get('/person/6')
