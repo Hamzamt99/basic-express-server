@@ -23,7 +23,7 @@ app.use(logger)
 
 // controller
 app.get('/', (req, res) => { res.status(200).json('welcome to home page') })
-app.get('/person/:name', validator, personHandler)
+app.get('/person', validator, personHandler)
 
 // using the handle errors in every route
 app.use(Error404)
