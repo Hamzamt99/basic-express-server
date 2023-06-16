@@ -1,10 +1,11 @@
 'use strict'
 
 module.exports = function validator(req, res, next) {
-    let param = req.params.name;
-    if(isNaN(+param)){   
-        req.query = param;
+    let query = req.query.name;
+    if(isNaN(+query)){   
+        req.query = query;
         next();
+        console.log(query)
     }else {
         next(500)
     }
