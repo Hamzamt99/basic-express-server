@@ -2,7 +2,7 @@
 
 ## Action Link : https://github.com/Hamzamt99/basic-express-server/actions
 
-## Pull Link : https://github.com/Hamzamt99/basic-express-server/pull/2
+## Pull Link : https://github.com/Hamzamt99/basic-express-server/pull/7
 
 ## repo link : https://github.com/Hamzamt99/basic-express-server
 
