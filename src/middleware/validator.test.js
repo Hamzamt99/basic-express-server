@@ -8,9 +8,13 @@ const req = supertest(app)
 
 describe('Test the middlewares ', () => {
 
-    it('if the name is in the query string', async () => {
+    it('if the name is not in the query string', async () => {
         const res = await req.get('/person?name=');
         expect(res.status).toEqual(500);
+    })
+    it('if the name is in the query string', async () => {
+        const res = await req.get('/person?name=hamza');
+        expect(res.status).toEqual(200);
     })
     it('test the query if string', async () => {
         const res = await req.get('/person?name=hamza')
